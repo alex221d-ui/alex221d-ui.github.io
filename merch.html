@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wacky Kar Klub - Merchandise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="about.html#about">About</a></li>
+      <li><a href="merch.html#menu">Merch</a></li>
+      <li><a href="services.html#services">Services</a></li>
+      <li><a href="news.html#news">News & Events</a></li>
+      <li><a href="purchase.html#purchase">Buy/Join</a></li>
+      <li><button id="toggleMode">🌓</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Merchandise Section -->
+<section id="menu" class="section">
+  <h2>Our Merchandise</h2>
+  <div class="merch-grid">
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/tshirt1.jpg" alt="Green Tee">
+      <h6>Green Tee</h6>
+      <p>£15</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/tshirt2.jpg" alt="Grey Tee">
+      <h6>Grey Tee</h6>
+      <p>£17</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/tshirt3.jpg" alt="Club Logo Tee">
+      <h6>Club Logo Tee</h6>
+      <p>£10</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/hoodie1.jpg" alt="Black Hoodie">
+      <h6>Black Hoodie</h6>
+      <p>£35</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/hoodie2.jpg" alt="Grey Hoodie">
+      <h6>Grey Hoodie</h6>
+      <p>£35</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/wristband.jpg" alt="Wristband">
+      <h6>Wristband</h6>
+      <p>£5</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/air.jpg" alt="Air Freshener">
+      <h6>Air Freshener</h6>
+      <p>£4</p>
+    </div>
+    <div class="merch-card" onclick="window.location.href='purchase.html#purchase';">
+      <img src="Images/stickers.jpg" alt="Car Stickers">
+      <h6>Car Stickers</h6>
+      <p>£2</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Powered by Wacky Kar Klub</p>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('toggleMode');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+  });
+</script>
+
+</body>
+</html>

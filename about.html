@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wacky Kar Klub - About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="merch.html#menu">Merch</a></li>
+      <li><a href="services.html#services">Services</a></li>
+      <li><a href="news.html#news">News & Events</a></li>
+      <li><a href="purchase.html#purchase">Buy/Join</a></li>
+      <li><button id="toggleMode">🌓</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="about" class="about-section">
+  <h2>About the Club</h2>
+  
+  <p>The <strong>Wacky Kar Klub</strong> is more than just a group of car enthusiasts — it’s a vibrant community united by a love of all things quirky, classic, and custom. Our mission is to celebrate creativity in automotive design, foster friendships, and provide a welcoming space where car lovers of all ages and skill levels can connect, share, and inspire one another.</p>
+  
+  <p>Founded by a group of friends who wanted to turn their shared passion for unique motors into something more, the club has grown from a local meet-up into a lively network spanning across Northern Ireland and beyond. Over the years, the Wacky Kar Klub has hosted countless events, rallies, and car shows, making us a well-known fixture in the automotive community.</p>
+  
+  <p>We pride ourselves on our values of <strong>inclusivity, camaraderie, and fun</strong>. Every member is encouraged to share their ideas, showcase their vehicles, and enjoy the spirit of good craic alongside like-minded enthusiasts. Whether you’re a fan of vintage classics, quirky custom builds, or high-performance modern cars, you’ll find a place in our club.</p>
+  
+  <p>Our diverse collection of registered vehicles ranges from restored classics from the 1960s and 70s, to eccentric custom builds, hot rods, and unique modern imports. Each car tells a story, reflecting the creativity and personality of its owner — and together, they form the heartbeat of the Wacky Kar Klub.</p>
+  
+  <blockquote>"This club has been a pillar in the community for decades. We love craic & cars!"</blockquote>
+
+  <div class="carousel-container">
+    <img src="Images/about1.jpg" alt="Club members at a rally" class="carousel-slide">
+    <img src="Images/about2.jpg" alt="Classic cars on display" class="carousel-slide">
+    <img src="Images/about3.jpg" alt="Custom car showcase" class="carousel-slide">
+    <div class="carousel-caption">Our club in action!</div>
+  </div>
+</section>
+
+
+<footer>
+  <p>Powered by Wacky Kar Klub</p>
+</footer>
+
+<script>
+// Light/Dark mode toggle
+const toggle = document.getElementById('toggleMode');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+});
+
+// Carousel functionality
+let slideIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function showSlides() {
+  slides.forEach((slide) => slide.classList.remove('active'));
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].classList.add('active');
+  setTimeout(showSlides, 4000);
+}
+
+showSlides();
+</script>
+
+</body>
+</html>
