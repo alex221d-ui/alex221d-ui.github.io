@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wacky Kar Klub - Buy/Join</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="news.html">News & Events</a></li>
+      <li><a href="purchase.html">Buy/Join</a></li>
+      <li><button id="toggleMode">🌓</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="purchase" class="section">
+  <h2>Buy Merchandise / Join</h2>
+  <form>
+    <label for="item">Select Item:</label>
+    <select id="item" name="item" required>
+      <option value="">--Choose an item--</option>
+      <option value="membership">Club Membership £5/month</option>
+      <option value="green_tee">Green Tee £15</option>
+      <option value="grey_tee">Grey Tee £17</option>
+      <option value="club_logo_tee">Club Logo Tee £10</option>
+      <option value="black_hoodie">Black Hoodie £35</option>
+      <option value="grey_hoodie">Grey Hoodie £35</option>
+      <option value="wristband">Wristband £5</option>
+      <option value="air_freshener">Air Freshener £4</option>
+      <option value="car_stickers">Car Stickers £2</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="address">Shipping Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <button type="submit">Buy Now</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

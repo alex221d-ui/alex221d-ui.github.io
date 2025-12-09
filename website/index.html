@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wacky Kar Klub - Home</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* SECTION SPACING FIX */
+section {
+  padding: 4rem 1.5rem;
+  margin: 3rem auto;
+  max-width: 1100px;
+}
+
+/* HERO FIX */
+.hero-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* GRID FIXES (to prevent overlap) */
+.merch-grid,
+.services-grid,
+.news-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 2rem;
+}
+
+/* CARD SPACING FIX */
+.merch-card,
+.service-card,
+.news-story {
+  background: rgba(0,0,0,0.15);
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+/* Images inside cards */
+.merch-card img,
+.service-card img,
+.news-story img {
+  width: 100%;
+  border-radius: 6px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* NEWS STORY LAYOUT FIX */
+.news-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 750px) {
+  .news-story {
+    flex-direction: row;
+  }
+}
+
+/* NAV MOBILE FIX */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin: 10px;
+}
+
+@media (max-width: 800px) {
+  .mobile-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* ---------- CENTER BUTTONS + CTA FIX ---------- */
+
+.btn {
+  display: inline-block;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.section,
+.about-teaser,
+.merch-teaser,
+.services-teaser,
+.news-teaser,
+.cta {
+  text-align: center;
+}
+
+.cta h2,
+.cta p,
+.cta a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="about.html#about">About</a></li>
+      <li><a href="merch.html#menu">Merch</a></li>
+      <li><a href="services.html#services">Services</a></li>
+      <li><a href="news.html#news">News & Events</a></li>
+      <li><a href="purchase.html#purchase">Buy/Join</a></li>
+      <li><button id="toggleMode">🌓</button></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero-container">
+  <img src="Images/car1.jpg" class="hero-img" alt="Club Logo">
+
+  <div class="hero-text">
+    <h1>Welcome to Wacky Kar Klub</h1>
+    <p>Your destination for quirky, classic, and custom cars. Join a community where passion meets fun and every vehicle has a story.</p>
+    <a href="purchase.html#purchase" class="btn">Join the Club</a>
+  </div>
+</section>
+
+<section class="about-teaser">
+  <h2>About Us</h2>
+  <p>The Wacky Kar Klub is a lively and welcoming community of car enthusiasts from Northern Ireland and beyond.</p>
+  <p>We host regular meetups, rallies, and shows.</p>
+  <a href="about.html#about" class="btn">Learn More</a>
+</section>
+
+<section class="merch-teaser">
+  <h2>Featured Merchandise</h2>
+  <p>Show your Wacky Kar Klub pride with our exclusive merchandise.</p>
+
+  <div class="merch-grid">
+    <div class="merch-card" onclick="location.href='purchase.html#purchase'">
+      <img src="Images/tshirt1.jpg" alt="Green Tee">
+      <h6>Green Tee</h6>
+      <p>£15 – Perfect for casual meetups.</p>
+    </div>
+
+    <div class="merch-card" onclick="location.href='purchase.html#purchase'">
+      <img src="Images/hoodie1.jpg" alt="Hoodie">
+      <h6>Black Hoodie</h6>
+      <p>£35 – Cozy and stylish for events.</p>
+    </div>
+
+    <div class="merch-card" onclick="location.href='purchase.html#purchase'">
+      <img src="Images/wristband.jpg" alt="Wristband">
+      <h6>Wristband</h6>
+      <p>£5 – Simple membership accessory.</p>
+    </div>
+  </div>
+
+  <a href="merch.html#menu" class="btn">See All Merchandise</a>
+</section>
+
+<section class="services-teaser">
+  <h2>Our Services</h2>
+  <p>We help keep your vehicle polished and customised.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="Images/service1.jpg" alt="Car Wash">
+      <h3>Full Car Wash</h3>
+      <p>Interior + exterior cleaning.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service2.jpg" alt="Detailing">
+      <h3>Detailing</h3>
+      <p>Perfect for car shows.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="Images/service3.jpg" alt="Custom Work">
+      <h3>Custom Work</h3>
+      <p>Mods, paint & accessories.</p>
+    </div>
+  </div>
+
+  <a href="services.html#services" class="btn">View All Services</a>
+</section>
+
+<section class="news-teaser">
+  <h2>Latest News & Events</h2>
+  <p>Stay up to date with our latest shows and meets.</p>
+
+  <div class="news-grid">
+
+    <div class="news-story">
+      <img src="Images/portrush1.jpg" alt="Portrush">
+      <div>
+        <h3>Wacky Kar Klub Rolls Into Portrush!</h3>
+        <p>A weekend of colour, laughter, and chrome.</p>
+        <a href="news.html#news" class="btn">Read More</a>
+      </div>
+    </div>
+
+    <div class="news-story">
+      <img src="Images/edinburgh1.jpg" alt="Edinburgh">
+      <div>
+        <h3>Road Trip to Edinburgh!</h3>
+        <p>Scenic drives & city adventures.</p>
+        <a href="news.html#news" class="btn">Read More</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Join?</h2>
+  <p>Become part of the most unique car club around.</p>
+  <a href="purchase.html#purchase" class="btn">Become a Member</a>
+</section>
+
+<footer>
+  <p>Powered by Wacky Kar Klub</p>
+</footer>
+
+<script>
+document.querySelector('.mobile-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
